@@ -6,7 +6,7 @@ FROM
 JOIN 
     Orders O ON P.product_id = O.product_id
 WHERE 
-    O.order_date LIKE "2020-02%"
+    O.order_date >= "2020-02-01" AND O.order_date < "2020-03-01"
 GROUP BY 
     product_name
 HAVING 
